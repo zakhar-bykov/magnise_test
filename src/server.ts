@@ -1,5 +1,5 @@
 import config from './modules/config'
-import app from './express/app'
+import app from './express.app'
 
 const server = require('http').createServer(app)
 
