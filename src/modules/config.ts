@@ -1,4 +1,4 @@
-import 'dotenv/config'
+require('dotenv').config({ path: __dirname + '/../../config/.env' })
 
 export const config = {
     app: {
@@ -9,7 +9,7 @@ export const config = {
         host: process.env.HOST || 'localhost'
     },
     coinAPI: {
-        session: process.env.COIN_API_KEY || '',
+        key: process.env.COIN_API_KEY || '',
         httpURL: process.env.COIN_API_HTTP_URL || '',
         wsURL: process.env.COIN_API_WS_URL || ''
     }
