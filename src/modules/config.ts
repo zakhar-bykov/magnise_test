@@ -8,6 +8,10 @@ export const config = {
         port: parseInt(process.env.PORT || '3000'),
         host: process.env.HOST || 'localhost'
     },
+    mongo: {
+        url: process.env.MONGO_URL || '',
+        db: process.env.MONGO_DB || ''
+    },
     coinAPI: {
         key: process.env.COIN_API_KEY || '',
         httpURL: process.env.COIN_API_HTTP_URL || '',
