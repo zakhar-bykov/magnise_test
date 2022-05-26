@@ -1,0 +1,11 @@
+node_modules
+dist
+
+.gitignore
+config
+data
+
+#tt.doc
+~$tt.doc
+
+.DS_Store
