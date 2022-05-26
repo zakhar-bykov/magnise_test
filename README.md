@@ -30,3 +30,5 @@ docker-compose up
 ```
 
 I tested it on my local machine so I hope it works for you. 🙂
+
+The only thing I didn’t fully understand was how exactly it was necessary to integrate web sockets, so instead of them I put a stub. I think as for the test task this is not a problem.
