@@ -1,0 +1,31 @@
+version: "3"
+services:
+  app:
+    container_name: app
+    image: magnise-test
+    restart: always
+    build: .
+    ports:
+      - "3000:3000"
+    links:
+      - mongo
+  mongo:
+    container_name: mongo
+    image: mongo
+    restart: always
+    volumes:
+      - ./data/db:/data/db
+    ports:
+      - '27017:27017'
+  mongo-express:
+    container_name: mongo-express
+    image: mongo-express
+    restart: unless-stopped
+    ports:
+      - 8081:8081
+    environment:
+      ME_CONFIG_MONGODB_SERVER: mongo
+networks:
+  default:
+    external:
+      name: magnise-test-net
